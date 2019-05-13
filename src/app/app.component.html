@@ -1,0 +1,19 @@
+<!-- <app-footer></app-footer>
+<app-header></app-header>
+Welcome to {{ title }}! -->
+<!-- 
+<h1 class="center">Virtual Scroll using Angular 7</h1>
+
+<ul class="list">
+    <cdk-virtual-scroll-viewport style="height: 500px" itemSize="90" (scrolledIndexChange)="handler($event)">
+        <ng-container *cdkVirtualFor="let n of numbers">
+            <li> {{n}} </li>
+        </ng-container>
+    </cdk-virtual-scroll-viewport>
+</ul> -->
+
+<div class="modal-body" style="height: 120px;background-color: red;overflow: auto;" infinite-scroll [infiniteScrollDistance]="modalScrollDistance" [infiniteScrollThrottle]="modalScrollThrottle" [scrollWindow]="false" (scrolled)="onModalScrollDown()">
+    <p *ngFor="let item of array">
+        {{ item }}
+    </p>
+</div>
